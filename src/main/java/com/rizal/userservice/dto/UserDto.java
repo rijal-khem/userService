@@ -1,28 +1,15 @@
-package com.rizal.userservice.model;
+package com.rizal.userservice.dto;
+
+public class UserDto {
 
 
-import javax.persistence.*;
-
-@Entity
-@Table(name ="user")
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     private String firstName;
     private String lastName;
     private String email;
-    private String encodedPassword;
+    private String password;
 
-    public  User(){}
+    public UserDto(){
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getFirstName() {
@@ -49,11 +36,11 @@ public class User {
         this.email = email;
     }
 
-    public String getEncodedPassword() {
-        return encodedPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setEncodedPassword(String encodedPassword) {
-        this.encodedPassword = encodedPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

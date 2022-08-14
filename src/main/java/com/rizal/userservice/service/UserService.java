@@ -1,12 +1,16 @@
 package com.rizal.userservice.service;
 
+import com.rizal.userservice.dto.UserDto;
 import com.rizal.userservice.model.User;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 public interface UserService {
 
-    void saveUser(User user);
+    void saveUser(UserDto userDto);
 
+    boolean existsByEmail(String email);
 
+    User getUserByEmail(String email);
 }
